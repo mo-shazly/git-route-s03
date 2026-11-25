@@ -14,3 +14,9 @@ jobs:
 
         - name: install cowsay
           run: ./script.sh
+
+  sec_job:   
+   runs-on: ubuntu-latest
+   steps:
+    - name: echo name
+      run: echo "hello from sc job"
