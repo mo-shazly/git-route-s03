@@ -16,6 +16,7 @@ jobs:
           run: ./script.sh
 
   sec_job:   
+   needs: cowsay
    runs-on: ubuntu-latest
    steps:
     - name: echo name
