@@ -15,9 +15,8 @@ jobs:
         - name: install cowsay
           run: ./script.sh
 
-  sec_job:   
-   needs: cowsay
-   runs-on: ubuntu-latest
-   steps:
-    - name: echo name
-      run: echo "hello from sc job"
+        - uses: actions/upload-artifact@v7
+          with:
+            name: my-artifact
+            path: dragon.txt
+
