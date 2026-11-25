@@ -3,8 +3,14 @@ name: generate ascii artwork
 on: push
 
 jobs:
-    cowsay:
+  cowsay:
      runs-on: ubuntu-latest
      steps:
+        - name: checkout
+          uses: actions/checkout@v7
+
+        - name: add execute permission
+          run: chmod +x script.sh
+
         - name: install cowsay
           run: ./script.sh
