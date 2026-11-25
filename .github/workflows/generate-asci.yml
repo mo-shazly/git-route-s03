@@ -3,8 +3,9 @@ name: generate ascii artwork
 on: push
 
 jobs:
-    runs-on: ubuntu-latest
-    steps:
+    cowsay:
+     runs-on: ubuntu-latest
+     steps:
         - name: install cowsay
           run: sudo apt-get install cowsay -y
 
