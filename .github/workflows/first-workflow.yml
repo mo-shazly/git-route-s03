@@ -1,0 +1,14 @@
+name: first-workflow
+
+on: push
+
+jobs:
+ print_name:
+  runs-on: ubuntu-latest
+  steps:
+  - name: print msg
+  
+    run: echo "my first workflow"
+
+  - name: print hello
+    run: echo "hello"
