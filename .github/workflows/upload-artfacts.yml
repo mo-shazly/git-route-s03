@@ -1,6 +1,11 @@
 name: upload-artifact-multi-jobs
 
-on: workflow_dispatch
+#filters
+
+on:
+  push:
+    branches:
+      - 'feature/*'
 
 jobs:
     build-job1:
