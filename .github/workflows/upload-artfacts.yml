@@ -1,10 +1,38 @@
-name: genrate ascii artwork
+name: upload-artifact-multi-jobs
 
 on: push
 
 jobs:
-    ascii_job:
+    build-job1:
         runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v7.0.1
+
+            - name: install cowsay package
+              run: |
+                chmod +x script.sh
+                ./script.sh
+
+            - name: sleep
+             
+    test-job2:
+      needs: build-job1
+      runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v7.0.1
+
+            - name: install cowsay package
+              run: |
+                chmod +x script.sh
+                ./script.sh
+                ls -l
+
+
+    upload-job3:
+      needs: [test-job2,build-job1]
+      runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@v7.0.1
@@ -19,3 +47,4 @@ jobs:
               with:
                 name: my-artifact
                 path: dragon.txt
+                retention-days: 5
