@@ -5,7 +5,7 @@ name: upload-artifact-multi-jobs
 on:
   push:
     branches:
-      - feature/login
+      - 'feature/*'
 
 jobs:
     build-job1:
