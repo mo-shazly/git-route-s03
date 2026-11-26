@@ -3,6 +3,8 @@ name: upload-artifact-multi-jobs
 #filters
 
 on:
+  pull_request:
+  workflow_dispatch:
   push:
     branches:
       - 'feature/*'
