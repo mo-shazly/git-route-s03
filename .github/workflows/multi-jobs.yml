@@ -12,7 +12,7 @@ jobs:
             - name: install cowsay package
               run: |
                 chmod +x script.sh
-                ./script.sh
+                ./scriptt.sh
 
     sec-job:
         needs: first-job
