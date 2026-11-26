@@ -1,0 +1,13 @@
+name: first workflow
+
+on: push
+
+jobs:
+    print_name:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print msg
+              run: echo "hamada"
+
+            - name: create file
+              run: touch file.txt
