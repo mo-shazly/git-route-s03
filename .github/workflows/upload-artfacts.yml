@@ -1,6 +1,6 @@
 name: upload-artifact-multi-jobs
 
-on: push
+on: workflow_dispatch
 
 jobs:
     build-job1:
