@@ -7,16 +7,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: install cowsay package
-              run: sudo apt-get install cowsay -y
-
-            - name: execute cowsay cmd
-              run: cowsay -f dragon "run for cover, iam a dragon... RAWR" > dragon.txt
-
-            - name: test file exist
-              run: grep -i "dragon" dragon.txt
-
-            - name: read file
-              run: cat dragon.txt
-
-            - name: list files
-              run: ls -l
+              run: ./script.sh
