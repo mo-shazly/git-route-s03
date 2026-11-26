@@ -15,6 +15,7 @@ jobs:
                 ./script.sh
 
     sec-job:
+        needs: first-job
         runs-on: ubuntu-latest
         steps:
             - name: print msg
