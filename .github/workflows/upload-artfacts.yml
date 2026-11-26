@@ -19,7 +19,7 @@ jobs:
     test-job2:
       needs: build-job1
       runs-on: ubuntu-latest
-        steps:
+      steps:
             - name: Checkout
               uses: actions/checkout@v7.0.1
 
@@ -33,7 +33,7 @@ jobs:
     upload-job3:
       needs: [test-job2,build-job1]
       runs-on: ubuntu-latest
-        steps:
+      steps:
             - name: Checkout
               uses: actions/checkout@v7.0.1
 
